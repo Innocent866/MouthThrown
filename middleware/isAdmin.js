@@ -1,4 +1,4 @@
-const userModel = require('../model/userModel')
+const userModel = require('../Model/user')
 //middleware for admin
 // const isAdmin = async(req, res, next) => {
 //     const {role} = req.user

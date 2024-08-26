@@ -8,14 +8,15 @@ const cors = require('cors')
 const fileUpload = require('express-fileupload'); 
 const cloudinary = require('cloudinary').v2;
 const userRouter = require('./router/userRouter');
-const propertyRouter = require('./router/propertyRouter');
+const itemRouter = require('./router/itemRouter');
+const orderRouter = require('./router/orderRouter');
 const path = require('path');
 
 // Configure Cloudinary
 cloudinary.config({
-    cloud_name: 'dponb9mg9',
-    api_key: '616315988328982',
-    api_secret: 'S9gHSSRbbtWwmuYnfcZwJ3sMDvs'
+    cloud_name: process.env.cloud_name,
+    api_key: process.env.api_key,
+    api_secret: process.env.api_secret
   });
  
 // custom middlewares
@@ -31,7 +32,8 @@ app.use(
 
 // Api's
 app.use('/api/user',userRouter);
-app.use('/api/property', propertyRouter);
+app.use('/api/item', itemRouter);
+app.use('/api/order', orderRouter);
 
 // server and DB
 connect()

@@ -20,7 +20,7 @@ const registration = async (req, res) => {
   try {
     const result = await cloudinary.uploader.upload(req.files.image.tempFilePath, {
       use_filename: true,
-      folder: "MouthThrownAsset",
+      folder: "MouthThrownAsset/users",
       resource_type: "auto",
     });
 
@@ -94,7 +94,7 @@ const getUserName = async (req, res) => {
   const { userId } = req.user;
   try {
     const user = await USER.findOne({ _id: userId });
-    res.status(200).json({ success: true, firstname: user.firstname });
+    res.status(200).json({ success: true, user: user });
   } catch (error) {
     res.status(500).send(error);
   }
