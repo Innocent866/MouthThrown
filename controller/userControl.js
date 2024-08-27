@@ -139,7 +139,7 @@ const forgotPassword = async (req, res) => {
       text: message,
     });
 
-    res.status(200).json({ success: true, data: "Email sent" });
+    res.status(200).json({ success: true, message: "Email sent" });
   } catch (error) {
     user.resetPasswordToken = undefined;
     user.resetPasswordExpire = undefined;
