@@ -1,5 +1,5 @@
 const express = require('express');
-const { registration, login, getUserName, isLoggedIn, forgotPassword, resetPassword, getAllUser } = require('../controller/userControl');
+const { registration, login, getUserName, isLoggedIn, forgotPassword, resetPassword, getAllUser, deleteUser } = require('../controller/userControl');
 const auth = require('../middleware/auth')
 const router = express.Router();
 const limiter = require('../middleware/loginAccountLimiter')
@@ -19,5 +19,6 @@ router.get('/isloggedin',isLoggedIn);
 router.post('/forgotpassword', forgotPassword);
 // reset password route
 router.put('/resetpassword/:resetToken',resetPassword) 
-
+// delete password route
+router.delete("/deleteuser/:id", deleteUser)
 module.exports = router;

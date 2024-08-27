@@ -10,7 +10,7 @@ const orderSchema = new Schema(
         quantity: { type: Number, required: true },
         image: { type: String, required: true },
         price: { type: Number, required: true },
-        category: { type: String, required: true },
+        // category: { type: String, required: true },
       },
     ],
     recipient: {
