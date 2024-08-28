@@ -60,8 +60,22 @@ const getAllOrdersByUser = async (req,res)=>{
     }
 }
 
+// Get a single product by ID
+const getOrderById = async (req, res) => {
+    try {
+      const product = await ORDER.findById(req.params.id);
+      if (!product) {
+        return res.status(404).json({ message: "Product not found" });
+      }
+      res.status(200).json(product);
+    } catch (error) {
+      res.status(500).json({ message: error.message });
+    }
+  };
+
 module.exports = {
     order,
     getOrders,
-    getAllOrdersByUser
+    getAllOrdersByUser,
+    getOrderById
 }
