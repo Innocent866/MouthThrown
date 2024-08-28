@@ -12,7 +12,7 @@ router.post('/create',auth, order )
 router.get('/getallorder',auth, restrict('admin'), getOrders);
 
 router.get('/single/:userId',auth,getAllOrdersByUser)
-router.get('/singleorder/:userId',getOrderById)
+router.get('/singleorder/:orderId',auth, restrict('admin'),getOrderById)
 
 
 module.exports = router;

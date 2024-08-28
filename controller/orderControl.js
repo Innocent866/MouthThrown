@@ -62,8 +62,9 @@ const getAllOrdersByUser = async (req,res)=>{
 
 // Get a single product by ID
 const getOrderById = async (req, res) => {
+    
     try {
-      const product = await ORDER.findById(req.params.id);
+      const product = await ORDER.findById(req.params.orderId);
       if (!product) {
         return res.status(404).json({ message: "Product not found" });
       }
