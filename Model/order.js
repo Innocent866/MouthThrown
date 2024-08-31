@@ -25,6 +25,7 @@ const orderSchema = new Schema(
     },
     address: {
       city: { type: String, required: true },
+      busstop: { type: String, required: true },
       housenumber: { type: String, required: true },
       street: {
         type: String,
