@@ -2,7 +2,7 @@ const ORDER = require('../Model/order');
 
 // create an order
 const order = async (req,res)=>{
-    req.body.user = req.user
+    req.body.user = req.user.userId
 
     const {orderItems,recipient,address} = req.body;
     if(orderItems && orderItems.length === 0){
