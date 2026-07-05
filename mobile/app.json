@@ -1,0 +1,12 @@
+{
+  "expo": {
+    "name": "MouthThrown",
+    "slug": "mouththrown",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "light",
+    "splash": { "backgroundColor": "#14181F" },
+    "ios": { "supportsTablet": true },
+    "android": { "package": "com.mouththrown.shop" }
+  }
+}
