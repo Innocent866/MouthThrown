@@ -11,6 +11,7 @@ const userRouter = require('./router/userRouter');
 const itemRouter = require('./router/itemRouter');
 const orderRouter = require('./router/orderRouter');
 const SubscriptionRouter = require('./router/SubscriptionRouter')
+const contactRouter = require('./router/contactRouter');
 const path = require('path');
 
 // Configure Cloudinary
@@ -36,6 +37,7 @@ app.use('/api/user',userRouter);
 app.use('/api/item', itemRouter);
 app.use('/api/order', orderRouter);
 app.use('/api/subscribe', SubscriptionRouter);
+app.use('/api/contact', contactRouter);
 
 // server and DB
 connect()

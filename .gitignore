@@ -1,2 +1,6 @@
 /node_modules
+node_modules/
 .env
+client/dist
+mobile/.expo
+tmp/
